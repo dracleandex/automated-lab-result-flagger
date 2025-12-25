@@ -1,0 +1,21 @@
+# config/reference_ranges.yaml
+hemoglobin:
+  id: 'hb'
+  unit: 'g/dL'
+  ranges:
+    male: {low: 13.5, high: 17.5}
+    female: {low: 12.0, high: 15.5}
+    default: {low: 12.0, high: 17.5} # Fallback if gender missing
+
+fasting_glucose:
+  id: 'fbs'
+  unit: 'mg/dL'
+  ranges:
+    default: {low: 70, high: 100} # Diabetic range starts > 126
+
+creatinine:
+  id: 'crt'
+  unit: 'mg/dL'
+  ranges:
+    male: {low: 0.7, high: 1.3}
+    female: {low: 0.6, high: 1.1}

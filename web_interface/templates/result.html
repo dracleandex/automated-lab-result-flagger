@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Complete</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; text-align: center; }
+        .stat-box { display: flex; justify-content: space-around; margin: 20px 0; }
+        .stat { padding: 20px; background: #eee; border-radius: 8px; width: 30%; }
+        .abnormal { color: red; font-weight: bold; }
+        .normal { color: green; font-weight: bold; }
+        .btn { display: block; width: 80%; margin: 10px auto; padding: 10px; text-decoration: none; color: white; border-radius: 5px; }
+        .btn-red { background: #dc3545; }
+        .btn-green { background: #28a745; }
+        .btn-blue { background: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>✅ Analysis Complete</h1>
+    
+    <div class="stat-box">
+        <div class="stat">
+            <h3>Total</h3>
+            <p>{{ total }}</p>
+        </div>
+        <div class="stat">
+            <h3 class="abnormal">Abnormal</h3>
+            <p class="abnormal">{{ abnormal }}</p>
+        </div>
+        <div class="stat">
+            <h3 class="normal">Normal</h3>
+            <p class="normal">{{ normal }}</p>
+        </div>
+    </div>
+
+    <h3>Download Reports</h3>
+    <a href="/download/abnormal_patients.xlsx" class="btn btn-red">⬇ Download Abnormal Patients ({{ abnormal }})</a>
+    <a href="/download/normal_patients.xlsx" class="btn btn-green">⬇ Download Normal Patients ({{ normal }})</a>
+    <a href="/download/all_patients_master.xlsx" class="btn btn-blue">⬇ Download Master List</a>
+
+    <br>
+    <a href="/">⬅ Process Another File</a>
+</body>
+</html>
